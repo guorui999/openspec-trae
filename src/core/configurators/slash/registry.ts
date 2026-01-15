@@ -20,6 +20,7 @@ import { RooCodeSlashCommandConfigurator } from './roocode.js';
 import { AntigravitySlashCommandConfigurator } from './antigravity.js';
 import { IflowSlashCommandConfigurator } from './iflow.js';
 import { ContinueSlashCommandConfigurator } from './continue.js';
+import { TraeSlashCommandConfigurator } from './trae.js';
 
 export class SlashCommandRegistry {
   private static configurators: Map<string, SlashCommandConfigurator> = new Map();
@@ -46,7 +47,9 @@ export class SlashCommandRegistry {
     const antigravity = new AntigravitySlashCommandConfigurator();
     const iflow = new IflowSlashCommandConfigurator();
     const continueTool = new ContinueSlashCommandConfigurator();
+    const trae = new TraeSlashCommandConfigurator();
 
+    this.configurators.set(trae.toolId, trae);
     this.configurators.set(claude.toolId, claude);
     this.configurators.set(codeBuddy.toolId, codeBuddy);
     this.configurators.set(qoder.toolId, qoder);

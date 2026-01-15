@@ -17,6 +17,7 @@ export interface AIToolOption {
 }
 
 export const AI_TOOLS: AIToolOption[] = [
+  { name: 'Trae', value: 'trae', available: true, successLabel: 'Trae' },
   { name: 'Amazon Q Developer', value: 'amazon-q', available: true, successLabel: 'Amazon Q Developer' },
   { name: 'Antigravity', value: 'antigravity', available: true, successLabel: 'Antigravity' },
   { name: 'Auggie (Augment CLI)', value: 'auggie', available: true, successLabel: 'Auggie' },
